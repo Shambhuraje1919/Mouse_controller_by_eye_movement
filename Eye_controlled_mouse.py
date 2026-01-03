@@ -1,6 +1,7 @@
 import cv2
 import mediapipe as mp
 import pyautogui
+import matplotlib  as mp
 
 cam = cv2.VideoCapture(0)
 face_mesh = mp.solutions.face_mesh.FaceMesh(refine_landmarks=True)
@@ -30,4 +31,5 @@ while True:
             pyautogui.click()
             pyautogui.sleep(2)
     cv2.imshow('Eye Project', frame)
+
     cv2.waitKey(1)
